@@ -1,0 +1,22 @@
+FROM httpd:2.4
+
+LABEL author="Versa"
+
+COPY index.html /usr/local/apache2/htdocs/
+
+COPY package.json /usr/local/apache2/htdocs/
+
+COPY composer.json /usr/local/apache2/htdocs/
+
+COPY package-lock.json /usr/local/apache2/htdocs/
+
+COPY ./docs /usr/local/apache2/htdocs/docs/
+
+COPY ./pages /usr/local/apache2/htdocs/pages/
+
+COPY ./dist /usr/local/apache2/htdocs/dist/
+
+COPY ./plugins /usr/local/apache2/htdocs/plugins/
+
+EXPOSE 80
+

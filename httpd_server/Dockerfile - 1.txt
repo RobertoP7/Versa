@@ -1,0 +1,22 @@
+FROM httpd:2.4
+
+LABEL author="Versa"
+
+COPY index.html /var/www/versa/
+
+COPY package.json /var/www/versa/
+
+COPY composer.json /var/www/versa/
+
+COPY package-lock.json /var/www/versa/
+
+COPY ./docs /var/www/versa/docs/
+
+COPY ./pages /var/www/versa/pages/
+
+COPY ./dist /var/www/versa/dist/
+
+COPY ./plugins /var/www/versa/plugins/
+
+EXPOSE 80
+
